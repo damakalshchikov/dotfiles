@@ -1,0 +1,7 @@
+[user]
+	email = 93596198+damakalshchikov@users.noreply.github.com
+	name = Mikhail Damakalshchikov
+[core]
+	editor = nano
+[init]
+    defaultBranch = main
