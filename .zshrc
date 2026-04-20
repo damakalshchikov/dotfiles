@@ -1,21 +1,43 @@
-# Homebrew: FPATH для zsh-completions
-if type brew &>/dev/null; then
-    FPATH="$(brew --prefix)/share/zsh-completions:$FPATH"
-fi
+# Утилита: добавить путь только если директория существует
+path_prepend() {
+    [[ -d "$1" ]] && export PATH="$1:$PATH"
+}
 
-# Инициализация автодополнения (один раз, после всех FPATH)
+# OS-specific конфигурация
+case "$(uname -s)" in
+    Darwin)
+        # Homebrew: FPATH для zsh-completions
+        if type brew &>/dev/null; then
+            FPATH="$(brew --prefix)/share/zsh-completions:$FPATH"
+        fi
+
+        # Плагины (Homebrew)
+        source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+        # Пути
+        path_prepend "/opt/homebrew/bin"
+        path_prepend "/Library/TeX/texbin"
+        ;;
+    Linux)
+        # Плагины (пакетный менеджер дистрибутива)
+        [[ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]] && \
+            source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+        # Пути
+        path_prepend "/usr/local/texlive/2024/bin/x86_64-linux"
+        ;;
+esac
+
+# Инициализация автодополнения
 autoload -Uz compinit
 compinit
 
-# Плагины
-source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-# PATH
-export PATH="$HOME/.local/bin:$PATH"
+# Универсальные пути
+path_prepend "$HOME/.local/bin"
 
 # Go
 export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin
+path_prepend "$GOPATH/bin"
 
 # История команд
 HISTSIZE=10000
