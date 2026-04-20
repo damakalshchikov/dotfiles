@@ -13,6 +13,10 @@ source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 # PATH
 export PATH="$HOME/.local/bin:$PATH"
 
+# Go
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+
 # История команд
 HISTSIZE=10000
 SAVEHIST=10000
