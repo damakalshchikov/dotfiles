@@ -13,24 +13,32 @@ case "$(uname -s)" in
 
         # Плагины (Homebrew)
         source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+        source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
         # Пути
         path_prepend "/opt/homebrew/bin"
         path_prepend "/Library/TeX/texbin"
+        path_prepend "/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
         ;;
     Linux)
         # Плагины (пакетный менеджер дистрибутива)
         [[ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]] && \
             source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+        [[ -f /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && \
+            source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
         # Пути
         path_prepend "/usr/local/texlive/2024/bin/x86_64-linux"
         ;;
 esac
 
-# Инициализация автодополнения
+# Инициализация автодополнения (с кэшированием - быстрее запуск)
 autoload -Uz compinit
-compinit
+if [[ -n ~/.zcompdump(#qN.mh+24) ]]; then
+    compinit
+else
+    compinit -C
+fi
 
 # Универсальные пути
 path_prepend "$HOME/.local/bin"
