@@ -86,3 +86,13 @@ precmd() { vcs_info }
 # Приглашение (prompt)
 setopt PROMPT_SUBST
 PROMPT='%F{green}%n@%m%f %F{blue}%~%f %F{yellow}${vcs_info_msg_0_}%f $ '
+
+# Команда для создания заготовки отчёта
+new-report() {
+    local template="$HOME/Documents/LaTeX/latex-report-template"
+    local dest="$HOME/Documents/LaTeX/${1:?Укажи имя: new-report <название>}"
+
+    cp -r "$template" "$dest"
+    rm -rf "$dest/.git" "$dest/build"
+    rm -f  "$dest/README.md" "$dest/README.ru.md" "$dest/LICENSE" "$dest/.DS_Store" "$dest/main.pdf"
+}
