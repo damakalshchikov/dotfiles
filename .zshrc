@@ -11,7 +11,7 @@ case "$(uname -s)" in
             FPATH="$(brew --prefix)/share/zsh-completions:$FPATH"
         fi
 
-        # Плагины (Homebrew)
+        # Плагины для zsh
         source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
         source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
@@ -32,7 +32,7 @@ case "$(uname -s)" in
         ;;
 esac
 
-# Инициализация автодополнения (с кэшированием - быстрее запуск)
+# Инициализация автодополнения
 autoload -Uz compinit
 if [[ -n ~/.zcompdump(#qN.mh+24) ]]; then
     compinit
@@ -55,7 +55,7 @@ setopt SHARE_HISTORY
 setopt HIST_IGNORE_DUPS
 setopt HIST_IGNORE_ALL_DUPS
 
-# Git-интеграция в приглашении (vcs_info)
+# Git-интеграция в приглашении
 autoload -Uz vcs_info
 
 zstyle ':vcs_info:*'        check-for-changes true
@@ -83,11 +83,12 @@ zstyle ':vcs_info:git:*+set-message:*' hooks git-status
 
 precmd() { vcs_info }
 
-# Приглашение (prompt)
+# Приглашение в командной строке вида:
+# user@device catalog git-branch $
 setopt PROMPT_SUBST
 PROMPT='%F{green}%n@%m%f %F{blue}%~%f %F{yellow}${vcs_info_msg_0_}%f $ '
 
-# Команда для создания заготовки отчёта
+# Команда для создания заготовки отчёта LaTeX
 new-report() {
     local template="$HOME/Documents/LaTeX/latex-report-template"
     local dest="$HOME/Documents/LaTeX/${1:?Укажи имя: new-report <название>}"
