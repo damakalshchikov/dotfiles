@@ -6,6 +6,12 @@ path_prepend() {
 # OS-specific конфигурация
 case "$(uname -s)" in
     Darwin)
+        # Настройки homebrew
+        eval "$(/opt/homebrew/bin/brew shellenv)"
+        export HOMEBREW_NO_ENV_HINTS=1          # Не показывать подсказки
+        export HOMEBREW_NO_AUTO_UPDATE=1        # Отключить автообновление (cron, каждое воскресенье в 10:00)
+        export HOMEBREW_CLEANUP_MAX_AGE_DAYS=30 # Удалять старые пакеты через 30 дней
+
         # Homebrew: FPATH для zsh-completions
         if type brew &>/dev/null; then
             FPATH="$(brew --prefix)/share/zsh-completions:$FPATH"
@@ -16,7 +22,6 @@ case "$(uname -s)" in
         source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
         # Пути
-        path_prepend "/opt/homebrew/bin"
         path_prepend "/Library/TeX/texbin"
         path_prepend "/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
         ;;
