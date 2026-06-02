@@ -9,6 +9,8 @@
 | `.zshrc` | Конфигурация Zsh |
 | `.zprofile` | Переменные окружения |
 | `.gitconfig` | Конфигурация Git |
+| `Brewfile` | Список CLI-утилит и приложений |
+| `install.sh` | Скрипт установки симлинков |
 
 ## Установка
 
@@ -19,8 +21,14 @@ chmod +x install.sh
 ./install.sh
 ```
 
-Скрипт создаст симлинки из домашней папки на файлы в `~/dotfiles/`.  
+Скрипт создаст симлинки из домашнего каталога на файлы в `~/dotfiles/`.  
 Если файл уже существует - он будет сохранён с расширением `.backup`.
+
+Для установки приложений из Brewfile:
+
+```bash
+brew bundle install
+```
 
 ## Добавление нового дотфайла
 
@@ -29,4 +37,4 @@ chmod +x install.sh
    ```bash
    create_symlink "$DOTFILES/.file_name" "$HOME/.file_name"
    ```
-3. Закоммить и запушь
+3. commit и push
