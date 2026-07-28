@@ -1,0 +1,13 @@
+/* Маркированные списки - выравнивание по ширине */
+.markdown-preview-view ul > li,
+.markdown-source-view ul > li {
+    text-align: justify;
+    text-justify: inter-word;
+    margin-right: 10px;
+}
+
+/* Поддержка режима редактирования (CodeMirror) */
+.cm-line .list-bullet + .cm-list-indent ~ .cm-line-content {
+    text-align: justify !important;
+    text-justify: inter-word !important;
+}

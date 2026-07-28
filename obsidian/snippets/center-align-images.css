@@ -1,0 +1,12 @@
+/* Режим чтения */
+img {
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Режим редактирования и живой предпросмотр */
+.markdown-source-view.mod-cm6 .cm-content > *,
+.markdown-preview-view .cm-content > * {
+  margin: auto auto !important;
+}

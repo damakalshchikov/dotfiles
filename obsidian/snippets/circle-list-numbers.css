@@ -1,0 +1,35 @@
+/* Убираем стандартную нумерацию */
+.markdown-preview-view ol,
+.markdown-source-view.mod-cm6 ol {
+  list-style: none;
+  counter-reset: custom-counter;
+  padding-left: 0;
+}
+
+/* Базовая стилизация элементов списка */
+.markdown-preview-view ol > li,
+.markdown-source-view.mod-cm6 ol > li {
+  counter-increment: custom-counter;
+  position: relative;
+  padding-left: 2.5em;
+  margin-bottom: 0.5em;
+}
+
+/* Кружок с номером — полый, с чёрной границей */
+.markdown-preview-view ol > li::before,
+.markdown-source-view.mod-cm6 ol > li::before {
+  content: counter(custom-counter);
+  position: absolute;
+  left: 0;
+  top: 0em;
+  width: 1.5em;
+  height: 1.5em;
+  line-height: 1.5em;
+  border-radius: 50%;
+  border: 2px solid black; /* Чёрная граница */
+  background-color: transparent; /* Без заливки */
+  color: black;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.7em;
+}

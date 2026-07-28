@@ -1,0 +1,17 @@
+/* Кастомный каллаут для учёбы */
+.callout[data-callout="study"] {
+    --callout-color: 76, 175, 80; /* Зеленый */
+    --callout-icon: lucide-book-open;
+}
+
+/* Кастомный каллаут для программирования */
+.callout[data-callout="code"] {
+    --callout-color: 156, 39, 176; /* Фиолетовый */
+    --callout-icon: lucide-code;
+}
+
+/* Кастомный каллаут для личного */
+.callout[data-callout="personal"] {
+    --callout-color: 255, 152, 0; /* Оранжевый */
+    --callout-icon: lucide-heart;
+}

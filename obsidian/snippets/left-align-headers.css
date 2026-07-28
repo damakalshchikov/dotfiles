@@ -1,0 +1,16 @@
+/* Выравнивание заголовков по левому краю, кроме H1 */
+.markdown-preview-view h2,
+.markdown-preview-view h3,
+.markdown-preview-view h4,
+.markdown-preview-view h5,
+.markdown-preview-view h6 {
+  text-align: left;
+}
+
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-header-2,
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-header-3,
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-header-4,
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-header-5,
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-header-6 {
+	text-align: left;
+}

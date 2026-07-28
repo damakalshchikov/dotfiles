@@ -1,0 +1,16 @@
+{
+  "cssTheme": "Minimal",
+  "textFontFamily": "Georgia",
+  "monospaceFontFamily": "Bitstream Vera Sans Mono",
+  "baseFontSize": 18,
+  "accentColor": "#707070",
+  "showViewHeader": true,
+  "theme": "moonstone",
+  "nativeMenus": false,
+  "enabledCssSnippets": [
+    "center-align-h1",
+    "center-align-images",
+    "center-align-text"
+  ],
+  "showRibbon": false
+}
