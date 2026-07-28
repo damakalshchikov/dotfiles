@@ -11,6 +11,8 @@
 | `.gitconfig` | Конфигурация Git |
 | `Brewfile` | Список CLI-утилит и приложений |
 | `install.sh` | Скрипт установки симлинков |
+| `obsidian/` | Настройки Obsidian |
+| `obsidian-sync.sh` | Синхронизация `obsidian/` с хранилищем |
 
 ## Установка
 
@@ -38,3 +40,22 @@ brew bundle install
    create_symlink "$DOTFILES/.file_name" "$HOME/.file_name"
    ```
 3. commit и push
+
+## Настройки Obsidian
+
+`obsidian/` - копия части `.obsidian/` из хранилища.
+
+### Сохранить изменения настроек
+
+```bash
+~/dotfiles/obsidian-sync.sh export
+cd ~/dotfiles && git add obsidian && git commit -m "Update Obsidian settings" && git push
+```
+
+### Применить настройки на новом компьютере
+
+1. Открой Obsidian
+2. `~/dotfiles/obsidian-sync.sh import "/путь/к/хранилищу"` (по умолчанию `DEFAULT_VAULT` в скрипте)
+3. Перезапусти Obsidian
+4. Settings -> Community plugins -> Browse -> установи плагины из `community-plugins.json`
+5. Settings -> Appearance -> Themes -> Browse -> установи тему из `appearance.json`
