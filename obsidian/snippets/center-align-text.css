@@ -1,0 +1,9 @@
+/* Выравнивание текста по ширине в режиме чтения */
+.markdown-preview-view {
+  text-align: justify;
+}
+
+/* Выравнивание текста по ширине в режиме редактирования (Live Preview) */
+.markdown-source-view.mod-cm6 .cm-contentContainer {
+  text-align: justify;
+}

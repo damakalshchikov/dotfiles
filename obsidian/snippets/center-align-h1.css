@@ -1,0 +1,9 @@
+/* Универсальное центрирование всех H1 */
+h1, 
+.HyperMD-header-1,
+.cm-header-1,
+.markdown-preview-view h1,
+.cm-line.HyperMD-header-1 {
+    text-align: center !important;
+}
+
