@@ -9,7 +9,7 @@
 | `.zshrc` | Конфигурация Zsh |
 | `.zprofile` | Переменные окружения |
 | `.gitconfig` | Конфигурация Git |
-| `Brewfile` | Список CLI-утилит и приложений |
+| `Brewfile` | Список CLI-утилит и cask-приложений |
 | `install.sh` | Скрипт установки симлинков |
 | `obsidian/` | Настройки Obsidian |
 | `obsidian-sync.sh` | Синхронизация `obsidian/` с хранилищем |
