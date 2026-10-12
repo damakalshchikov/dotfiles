@@ -1,7 +1,6 @@
 # CLI утилиты
 brew "gh"
 brew "go"
-brew "postgresql"
 brew "syncthing", restart_service: :changed
 brew "zsh-autosuggestions"
 brew "zsh-completions"
