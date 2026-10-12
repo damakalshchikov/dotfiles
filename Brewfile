@@ -2,7 +2,6 @@
 brew "gh"
 brew "go"
 brew "syncthing", restart_service: :changed
-brew "tailscale"
 brew "zsh-autosuggestions"
 brew "zsh-completions"
 brew "zsh-syntax-highlighting"
@@ -16,6 +15,7 @@ cask "docker-desktop"
 cask "obsidian"
 cask "readest"
 cask "spotify"
+cask "tailscale-app"
 cask "ungoogled-chromium"
 cask "visual-studio-code"
 
