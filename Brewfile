@@ -22,4 +22,5 @@ cask "ungoogled-chromium"
 cask "visual-studio-code"
 
 # App Store
-# keepassium - установлен через Mac App Store
+# KeePassium - Менеджер паролей для работы с базами паролей формата .kdbx
+# WireGuard - Официальный клиент VPN протокола WireGuard
