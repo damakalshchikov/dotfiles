@@ -18,6 +18,7 @@ cask "obsidian"
 cask "readest"
 cask "spotify"
 cask "tailscale-app"
+cask "termius"
 cask "ungoogled-chromium"
 cask "visual-studio-code"
 
