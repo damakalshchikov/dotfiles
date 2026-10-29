@@ -2,6 +2,7 @@
 brew "gh"
 brew "go"
 brew "rclone"
+brew "shellcheck"
 brew "syncthing", restart_service: :changed
 brew "zsh-autosuggestions"
 brew "zsh-completions"
