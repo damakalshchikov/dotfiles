@@ -1,7 +1,6 @@
 # CLI утилиты
 brew "gh"
 brew "go"
-brew "rclone"
 brew "shellcheck"
 brew "syncthing", restart_service: :changed
 brew "zsh-autosuggestions"
@@ -10,8 +9,7 @@ brew "zsh-syntax-highlighting"
 
 # Cask приложения
 cask "basictex"
-cask "claude"
-cask "claude-code"
+cask "chatgpt"
 cask "discord"
 cask "docker-desktop"
 cask "happ"
