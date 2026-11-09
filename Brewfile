@@ -10,6 +10,7 @@ brew "zsh-syntax-highlighting"
 # Cask приложения
 cask "basictex"
 cask "chatgpt"
+cask "codex"
 cask "discord"
 cask "docker-desktop"
 cask "happ"
