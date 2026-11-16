@@ -1,7 +1,11 @@
+# Если перед утилитой стоит #, то эта утилита используется
+# редко/почти не используется/используется по работе
+
 # CLI утилиты
 brew "gh"
 brew "go"
-brew "shellcheck"
+# brew "openstackclient"
+# brew "shellcheck"
 brew "syncthing", restart_service: :changed
 brew "zsh-autosuggestions"
 brew "zsh-completions"
@@ -16,12 +20,12 @@ cask "docker-desktop"
 cask "happ"
 cask "lens"
 cask "obsidian"
-cask "readest"
+# cask "readest"
 cask "spotify"
 cask "tailscale-app"
 cask "termius"
 cask "ungoogled-chromium"
-cask "visual-studio-code"
+# cask "visual-studio-code"
 cask "zed"
 
 # App Store
