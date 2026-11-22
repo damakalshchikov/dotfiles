@@ -25,8 +25,8 @@ cask "spotify"
 cask "tailscale-app"
 cask "termius"
 cask "ungoogled-chromium"
-# cask "visual-studio-code"
-cask "zed"
+cask "visual-studio-code"
+# cask "zed"
 
 # App Store
 # KeePassium - Менеджер паролей для работы с базами паролей формата .kdbx
