@@ -12,6 +12,7 @@ brew "zsh-completions"
 brew "zsh-syntax-highlighting"
 
 # Cask приложения
+cask "amneziavpn"
 cask "basictex"
 cask "chatgpt"
 cask "codex"
